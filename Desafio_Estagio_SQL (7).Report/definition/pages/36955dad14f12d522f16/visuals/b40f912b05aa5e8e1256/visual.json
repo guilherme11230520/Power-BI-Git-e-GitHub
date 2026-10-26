@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "b40f912b05aa5e8e1256",
+  "position": {
+    "x": 394.82643170356249,
+    "y": 0,
+    "z": 3000,
+    "height": 807.24817394258525,
+    "width": 327.39528551781018,
+    "tabOrder": 2000
+  },
+  "visualGroup": {
+    "displayName": "Derivados",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "e3190441c4de01380e75"
+}

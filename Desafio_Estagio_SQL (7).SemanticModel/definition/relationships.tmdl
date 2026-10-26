@@ -1,0 +1,40 @@
+relationship fc1578b5-7091-4dcc-a79a-12be516399bf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimCliente.DataNascimento
+	toColumn: LocalDateTable_e1edfa68-d317-4cb9-87a0-0a69d3e24570.Date
+
+relationship c71dd155-baa5-455d-a395-97d785392db4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimData.Data
+	toColumn: LocalDateTable_112a2693-896e-40f1-a18d-821414a24325.Date
+
+relationship aea445fd-14b7-48af-a119-6cdb10f723e0
+	fromColumn: DimProduto.CategoriaID
+	toColumn: DimCategoria.CategoriaID
+
+	annotation PBI_IsFromSource = FS
+
+relationship c0ad2c69-fc30-4d92-a732-f1ce9d8ff1af
+	fromColumn: FatoVendas.ClienteID
+	toColumn: DimCliente.ClienteID
+
+	annotation PBI_IsFromSource = FS
+
+relationship c3fd5b9b-a2db-4343-80e4-f39f016692a8
+	fromColumn: FatoVendas.Data
+	toColumn: DimData.Data
+
+	annotation PBI_IsFromSource = FS
+
+relationship c9fc5610-ee8a-4e00-a148-30999cc2a588
+	fromColumn: FatoVendas.ProdutoID
+	toColumn: DimProduto.ProdutoID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 13de60a8-6095-430d-bbf9-7f14fe8468c2
+	fromColumn: FatoVendas.VendedorID
+	toColumn: DimVendedor.VendedorID
+
+	annotation PBI_IsFromSource = FS
+

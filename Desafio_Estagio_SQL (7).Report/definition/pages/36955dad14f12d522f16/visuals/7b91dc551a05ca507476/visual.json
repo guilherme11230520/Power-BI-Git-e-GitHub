@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "7b91dc551a05ca507476",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 14000,
+    "height": 1080,
+    "width": 1920.591133004926,
+    "tabOrder": 8000
+  },
+  "visualGroup": {
+    "displayName": "Informações do Painel",
+    "groupMode": "ScaleMode"
+  },
+  "isHidden": true
+}

@@ -1,0 +1,39 @@
+table DimVendedor
+	lineageTag: 5dd7d8a8-fb00-4870-b9c8-6231a31a85f9
+
+	column VendedorID
+		dataType: int64
+		formatString: 0
+		lineageTag: 6d3f6424-9240-49ab-8598-42119666edf0
+		summarizeBy: none
+		sourceColumn: VendedorID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vendedor
+		dataType: string
+		lineageTag: 30292052-42d5-41dc-8217-e50bbc89fe10
+		summarizeBy: none
+		sourceColumn: Vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Loja
+		dataType: string
+		lineageTag: b3f9e4e4-ccd6-45ae-8e76-2a75958863ca
+		summarizeBy: none
+		sourceColumn: Loja
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimVendedor = m
+		mode: import
+		source =
+				let
+				  Origem = Sql.Database("JUNINHO", "master"),
+				  #"Navegação 1" = Origem{[Schema = "dbo", Item = "DimVendedor"]}[Data]
+				in
+				  #"Navegação 1"
+
+	annotation PBI_ResultType = Table
+

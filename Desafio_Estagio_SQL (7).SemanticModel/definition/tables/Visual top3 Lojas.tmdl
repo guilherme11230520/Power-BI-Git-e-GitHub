@@ -1,0 +1,48 @@
+table 'Visual top3 Lojas'
+	lineageTag: 2b164269-fdf2-4776-930e-e9f6f775a8ac
+
+	column Parâmetro
+		lineageTag: ff52ddcf-d8be-452f-ace2-00a576211dcb
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Parâmetro Pedido'
+
+		relatedColumnDetails
+			groupByColumn: 'Parâmetro Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parâmetro Campos'
+		isHidden
+		lineageTag: 62852051-e74d-4195-a8aa-afe389476c03
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Parâmetro Pedido'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parâmetro Pedido'
+		isHidden
+		formatString: 0
+		lineageTag: e8bf96a6-253f-4536-8ad5-e3b56e0020cc
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Visual top3 Lojas' = calculated
+		mode: import
+		source =
+				{
+				    ("Melhores", NAMEOF('Medidas'[Visual_HTML_Top3_Melhor_Loja]), 0),
+				    ("Piores", NAMEOF('Medidas'[Visual_HTML_Top3_Piores_Loja]), 1)
+				}
+
+	annotation PBI_Id = 897fecc2381542f1bb2543a764be504e
+

@@ -1,0 +1,48 @@
+table 'Visual top3 Categorias'
+	lineageTag: acd1392a-cb8e-49c9-ae2a-8b499a045b80
+
+	column Parâmetro
+		lineageTag: 1e6caf3d-9c4c-4c33-b9bc-a78484edcc1a
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Parâmetro Pedido'
+
+		relatedColumnDetails
+			groupByColumn: 'Parâmetro Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parâmetro Campos'
+		isHidden
+		lineageTag: c2d5b4aa-aad9-4108-849b-9404757eb758
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Parâmetro Pedido'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parâmetro Pedido'
+		isHidden
+		formatString: 0
+		lineageTag: 1b7b902e-e46c-449b-acfa-8a7e7b1327ed
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Visual top3 Categorias' = calculated
+		mode: import
+		source =
+				{
+				    ("Melhores", NAMEOF('Medidas'[Visual_HTML_Top3_melhor]), 0),
+				    ("Piores", NAMEOF('Medidas'[Visual_HTML_Top3_pior]), 1)
+				}
+
+	annotation PBI_Id = d7538de0efec4e7c96d4279dcb29d800
+

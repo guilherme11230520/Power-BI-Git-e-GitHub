@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "e3190441c4de01380e75",
+  "position": {
+    "x": 1165.1231527093596,
+    "y": 242.06896551724134,
+    "z": 4000,
+    "height": 807.24817394258525,
+    "width": 733.69378561165388,
+    "tabOrder": 4000
+  },
+  "visualGroup": {
+    "displayName": "Tabela Produtos Bookmark",
+    "groupMode": "ScaleMode"
+  }
+}

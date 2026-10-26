@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "5b840d8926291a0c014e",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 28000,
+    "height": 1080,
+    "width": 1920.591133004926,
+    "tabOrder": 13000
+  },
+  "visualGroup": {
+    "displayName": "Ajuda",
+    "groupMode": "ScaleMode"
+  },
+  "isHidden": true
+}

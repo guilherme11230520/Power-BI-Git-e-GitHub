@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "879533ce47a36b86063e",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 447.07086017430845,
+    "width": 1089.5680181887078,
+    "tabOrder": 1000
+  },
+  "visualGroup": {
+    "displayName": "Gráficos de Linhas",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "376b971b4382c66c1a0d"
+}

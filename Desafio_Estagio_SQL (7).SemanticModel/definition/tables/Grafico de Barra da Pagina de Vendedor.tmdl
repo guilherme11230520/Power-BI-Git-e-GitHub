@@ -1,0 +1,49 @@
+table 'Grafico de Barra da Pagina de Vendedor'
+	lineageTag: bcaabd5e-9abe-4f19-8e35-22ccec81f642
+
+	column 'Grafico de Barra da Pagina de Vendedor'
+		lineageTag: 670a492e-19c0-4a17-a421-2b64aae03f34
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Grafico de Barra da Pagina de Vendedor Pedido'
+
+		relatedColumnDetails
+			groupByColumn: 'Grafico de Barra da Pagina de Vendedor Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Grafico de Barra da Pagina de Vendedor Campos'
+		isHidden
+		lineageTag: c1a7bbad-5172-41c5-9dff-1ccc262a60e5
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Grafico de Barra da Pagina de Vendedor Pedido'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Grafico de Barra da Pagina de Vendedor Pedido'
+		isHidden
+		formatString: 0
+		lineageTag: fc671906-2cd6-4064-aa79-ad2275f41cb7
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Grafico de Barra da Pagina de Vendedor' = calculated
+		mode: import
+		source =
+				{
+				    ("Receita Total", NAMEOF('Medidas'[Receita Total]), 0),
+				    ("Lucro Total", NAMEOF('Medidas'[Lucro Total]), 1),
+				    ("Margem de Lucro", NAMEOF('Medidas'[Margem de Lucro %]), 2)
+				}
+
+	annotation PBI_Id = e7e5d7aae4544ded847ca50b8c084b92
+

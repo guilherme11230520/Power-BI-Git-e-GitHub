@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "0c9538184b4700b26c9a",
+  "position": {
+    "x": 13.300492610837438,
+    "y": 222.11822660098522,
+    "z": 6000,
+    "height": 245.748502994012,
+    "width": 1139.6407185628743,
+    "tabOrder": 6000
+  },
+  "visualGroup": {
+    "displayName": "Cards da Página",
+    "groupMode": "ScaleMode"
+  }
+}

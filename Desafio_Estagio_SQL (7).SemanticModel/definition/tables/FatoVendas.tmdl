@@ -1,0 +1,120 @@
+table FatoVendas
+	lineageTag: cabfd4b3-6afa-4fe5-bfba-eb488fb81132
+
+	column PedidoID
+		dataType: int64
+		formatString: 0
+		lineageTag: 2f2a496b-5cb0-4efa-b7ac-03c5a78681aa
+		summarizeBy: count
+		sourceColumn: PedidoID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Data
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: fa55c2f2-4af2-4dcc-bc2b-02031ebaf40f
+		summarizeBy: none
+		sourceColumn: Data
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ClienteID
+		dataType: int64
+		formatString: 0
+		lineageTag: 61cea1c1-22fc-45d0-8a78-55b3d03ffe20
+		summarizeBy: none
+		sourceColumn: ClienteID
+
+		annotation SummarizationSetBy = Automatic
+
+	column VendedorID
+		dataType: int64
+		formatString: 0
+		lineageTag: 4b9b1e6c-09bc-4061-aef0-8285e64f89ef
+		summarizeBy: none
+		sourceColumn: VendedorID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProdutoID
+		dataType: int64
+		formatString: 0
+		lineageTag: c80a5463-ebe1-4746-b908-7682eae7d839
+		summarizeBy: none
+		sourceColumn: ProdutoID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Item
+		dataType: int64
+		formatString: 0
+		lineageTag: 28fde54b-0498-471b-a433-dc5089acfb02
+		summarizeBy: sum
+		sourceColumn: Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantidade
+		dataType: int64
+		formatString: 0
+		lineageTag: 3a72e6c1-26cd-475e-92fa-281d245eeaf7
+		summarizeBy: sum
+		sourceColumn: Quantidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrecoUnitario
+		dataType: double
+		lineageTag: 588c8aef-848f-44f6-88af-31232330ffdf
+		summarizeBy: sum
+		sourceColumn: PrecoUnitario
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Desconto
+		dataType: double
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 7304e49e-a2da-44c4-be01-9879d799416b
+		summarizeBy: sum
+		sourceColumn: Desconto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Receita
+		dataType: double
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: f6e7b134-0f73-441a-b9ae-1dc307e47e67
+		summarizeBy: sum
+		sourceColumn: Receita
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column Lucro
+		dataType: double
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: eb1e9d3e-d429-4067-a4fe-cb382dffe3d4
+		summarizeBy: sum
+		sourceColumn: Lucro
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	partition FatoVendas = m
+		mode: import
+		source =
+				let
+				  Origem = Sql.Database("JUNINHO", "master"),
+				  #"Navegação 1" = Origem{[Schema = "dbo", Item = "FatoVendas"]}[Data]
+				in
+				  #"Navegação 1"
+
+	annotation PBI_ResultType = Table
+

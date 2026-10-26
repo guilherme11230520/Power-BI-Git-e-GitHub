@@ -1,0 +1,91 @@
+table DimData
+	lineageTag: 668a7037-7b69-4f7c-88c8-f0a859ba295c
+
+	column Data
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6cac95a9-98f5-44e5-9140-3f8897a43538
+		summarizeBy: none
+		sourceColumn: Data
+
+		variation Variation
+			isDefault
+			relationship: c71dd155-baa5-455d-a395-97d785392db4
+			defaultHierarchy: LocalDateTable_112a2693-896e-40f1-a18d-821414a24325.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Ano
+		dataType: int64
+		formatString: 0
+		lineageTag: bd084294-b18d-4616-8035-03e83cd758fc
+		summarizeBy: sum
+		sourceColumn: Ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		dataType: int64
+		formatString: 0
+		lineageTag: 0254beda-4844-499c-8e65-f1b4501e5051
+		summarizeBy: sum
+		sourceColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column NomeMes
+		dataType: string
+		lineageTag: e5f679e0-934d-4c09-91b2-f8310d4099b1
+		summarizeBy: none
+		sourceColumn: NomeMes
+		sortByColumn: NumeroMes
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumeroMes
+		dataType: int64
+		formatString: 0
+		lineageTag: 59fc1481-c3b7-4248-80bd-86328648d5e0
+		summarizeBy: sum
+		sourceColumn: NumeroMes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trimestre
+		dataType: int64
+		formatString: 0
+		lineageTag: aaa845c7-f4d8-47e7-8592-c3a5fc3d93a7
+		summarizeBy: sum
+		sourceColumn: Trimestre
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimData = m
+		mode: import
+		source =
+				let
+				  Origem = Sql.Database("JUNINHO", "master"),
+				  #"Navegação 1" = Origem{[Schema = "dbo", Item = "DimData"]}[Data],
+				    #"Valor Substituído" = Table.ReplaceValue(#"Navegação 1","January","Janeiro",Replacer.ReplaceText,{"NomeMes"}),
+				    #"Valor Substituído1" = Table.ReplaceValue(#"Valor Substituído","April","Abril",Replacer.ReplaceText,{"NomeMes"}),
+				    #"Valor Substituído2" = Table.ReplaceValue(#"Valor Substituído1","May","Maio",Replacer.ReplaceText,{"NomeMes"}),
+				    #"Valor Substituído3" = Table.ReplaceValue(#"Valor Substituído2","October","Outubro",Replacer.ReplaceText,{"NomeMes"}),
+				    #"Valor Substituído4" = Table.ReplaceValue(#"Valor Substituído3","December","Dezembro",Replacer.ReplaceText,{"NomeMes"}),
+				    #"Valor Substituído5" = Table.ReplaceValue(#"Valor Substituído4","February","Fevereiro",Replacer.ReplaceText,{"NomeMes"}),
+				    #"Valor Substituído6" = Table.ReplaceValue(#"Valor Substituído5","August","Agosto",Replacer.ReplaceText,{"NomeMes"}),
+				    #"Valor Substituído7" = Table.ReplaceValue(#"Valor Substituído6","November","Novembro",Replacer.ReplaceText,{"NomeMes"}),
+				    #"Valor Substituído8" = Table.ReplaceValue(#"Valor Substituído7","June","Junho",Replacer.ReplaceText,{"NomeMes"}),
+				    #"Valor Substituído9" = Table.ReplaceValue(#"Valor Substituído8","July","Julho",Replacer.ReplaceText,{"NomeMes"}),
+				    #"Valor Substituído10" = Table.ReplaceValue(#"Valor Substituído9","September","Setembro",Replacer.ReplaceText,{"NomeMes"}),
+				    #"Valor Substituído11" = Table.ReplaceValue(#"Valor Substituído10","March","Março",Replacer.ReplaceText,{"NomeMes"})
+				in
+				    #"Valor Substituído11"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
+

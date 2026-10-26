@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "d62adb34d8e17bbc0e44",
+  "position": {
+    "x": 691.45538096094856,
+    "y": 10.878519469225434,
+    "z": 3000,
+    "height": 42.5615763546798,
+    "width": 35.911330049261096,
+    "tabOrder": 2000
+  },
+  "visualGroup": {
+    "displayName": "Fechar Insights",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "f9f606485b0ed36ccdd2",
+  "isHidden": true
+}

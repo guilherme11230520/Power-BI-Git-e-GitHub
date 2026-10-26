@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Desafio_Estagio_SQL (7)"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "fe8cbc65-ecf9-48fe-9583-91d70d7548a4"
+  }
+}

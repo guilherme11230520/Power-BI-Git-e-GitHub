@@ -1,0 +1,32 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["DimCategoria","DimCliente","DimData","DimProduto","DimVendedor","FatoVendas","Medidas"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DimCategoria
+ref table DimCliente
+ref table DateTableTemplate_68d8a31e-d090-44e6-84d7-6deb1d45b24d
+ref table LocalDateTable_e1edfa68-d317-4cb9-87a0-0a69d3e24570
+ref table DimData
+ref table LocalDateTable_112a2693-896e-40f1-a18d-821414a24325
+ref table DimProduto
+ref table DimVendedor
+ref table FatoVendas
+ref table Medidas
+ref table 'Filtro dos Cartões da Pagina Executivo'
+ref table 'Visual top3 Categorias'
+ref table 'Visual top3 Lojas'
+ref table 'Grafico de Barra da Pagina de Vendedor'
+
+ref cultureInfo pt-BR
+

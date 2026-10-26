@@ -1,0 +1,119 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmarksMetadata/1.0.0/schema.json",
+  "items": [
+    {
+      "name": "28fa804c8c8bc971652b",
+      "displayName": "Filtro Página Executivo",
+      "children": [
+        "a955be61babca14da08a",
+        "62143b4cb5251915309d",
+        "e7639bdf346c6d541c3b"
+      ]
+    },
+    {
+      "name": "75de4aa916b1b224ed1e",
+      "displayName": "Filtro Página Vendas",
+      "children": [
+        "a63c8f99d4517604d032",
+        "03ff64e06d3c5ee1a0ed",
+        "5227cdb8065c962790b0"
+      ]
+    },
+    {
+      "name": "bead533d7eda51b7442c",
+      "displayName": "Filtro Página Cliente",
+      "children": [
+        "ee118d29b49d059b5887",
+        "2c1fb91d513da843e08d",
+        "74f05a511c158aecd40d"
+      ]
+    },
+    {
+      "name": "d42b4ab6720137820c17",
+      "displayName": "Filtro Página Vendedor",
+      "children": [
+        "91ef731d647d0e414702",
+        "b64e615757b0dd0bbde0",
+        "cbb29dcee437386eb00a"
+      ]
+    },
+    {
+      "name": "6afdf5d252062077e0ba",
+      "displayName": "Página Vendas",
+      "children": [
+        "a9be18f88ae84bd0a307",
+        "0f189bb35da6a8740803",
+        "d23d741e44d87c027e6b",
+        "5cfdc8b39c009bd7aca0",
+        "fc45a0ffd2a9a65c04aa",
+        "a12d6760ce9735923dc7",
+        "d99aef6ae31578ecd937",
+        "ba69e3cc00d88c760518",
+        "a898133d67d1220193db",
+        "748df1ffc70e18d5cdb8",
+        "062e48803ba3268ea455",
+        "92f6768d0d5641c0bb03",
+        "e849159d0d5023c00bb0"
+      ]
+    },
+    {
+      "name": "39fc1ed5db9d4b69c090",
+      "displayName": "Página Clientes",
+      "children": [
+        "b571793f60ca7bda0a20",
+        "75a4cf6032b384c87c63",
+        "98606203e26007312251",
+        "857e05761e7070ed52ee",
+        "2bd2cffa79851b201e96",
+        "75d9432b5deec0900c2a",
+        "20893c7131786dc74386"
+      ]
+    },
+    {
+      "name": "319ceec408b8d0298d06",
+      "displayName": "Página Vendedor",
+      "children": [
+        "36f2f73d914b8b17286d",
+        "1b63c85399002104a768"
+      ]
+    },
+    {
+      "name": "466b48495445d1e35c58",
+      "displayName": "Página Executivo",
+      "children": [
+        "95f265e30b4b81191d79",
+        "da20c283208507a8b525",
+        "d8ddaa5d137e653ba4a9",
+        "62cdb3f5d6cbcb8b2a69",
+        "538453400a893b374da0",
+        "f3c9af701bc60634d36d",
+        "d318546707dc94a9a405",
+        "f98f01965a522909b524"
+      ]
+    },
+    {
+      "name": "46e29f5629aabb823ae2"
+    },
+    {
+      "name": "b031ea6e4903048700bb"
+    },
+    {
+      "name": "1696db990cee13ee2506"
+    },
+    {
+      "name": "e5edd5938c0ee4018143"
+    },
+    {
+      "name": "23e3ab82a07801eadc9a"
+    },
+    {
+      "name": "b1a4c90c77981dead6ed"
+    },
+    {
+      "name": "2d828d0219ead0608b65"
+    },
+    {
+      "name": "d59f55a015833c4cbec2"
+    }
+  ]
+}

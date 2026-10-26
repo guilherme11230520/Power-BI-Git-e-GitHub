@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "989cabdb70c8bc2ad530",
+  "position": {
+    "x": 1166.4532019704434,
+    "y": 662.36453201970437,
+    "z": 2000,
+    "height": 396.35467980295573,
+    "width": 724.87684729064017,
+    "tabOrder": 2000
+  },
+  "visualGroup": {
+    "displayName": "Gráfico de Barras",
+    "groupMode": "ScaleMode"
+  }
+}

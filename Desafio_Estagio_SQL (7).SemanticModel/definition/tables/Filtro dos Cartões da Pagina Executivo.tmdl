@@ -1,0 +1,51 @@
+table 'Filtro dos Cartões da Pagina Executivo'
+	lineageTag: ffabe244-c1ae-4228-a268-6fbb6fed6a89
+
+	column Parâmetro
+		lineageTag: 655c22e3-577a-4c74-b1ab-dc0e6cc03fd4
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Parâmetro Pedido'
+
+		relatedColumnDetails
+			groupByColumn: 'Parâmetro Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parâmetro Campos'
+		isHidden
+		lineageTag: a10a7046-0397-484b-96cd-898bdae0c7b9
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Parâmetro Pedido'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parâmetro Pedido'
+		isHidden
+		formatString: 0
+		lineageTag: e88dca37-5fb4-45c5-8c69-4faf3d71a19e
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Filtro dos Cartões da Pagina Executivo' = calculated
+		mode: import
+		source =
+				{
+				    ("Receita Total", NAMEOF('Medidas'[Receita Total]), 0),
+				    ("Qtd Total", NAMEOF('Medidas'[Qtd Total]), 1),
+				    ("Ticket Médio", NAMEOF('Medidas'[Ticket Médio]), 2),
+				    ("Lucro Total", NAMEOF('Medidas'[Lucro Total]), 3),
+				    ("Margem de Lucro %", NAMEOF('Medidas'[Margem de Lucro %]), 4)
+				}
+
+	annotation PBI_Id = 6e6889ef901e4a50bd1b822bd726d9a9
+

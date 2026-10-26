@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "217054f711dcd0e44e9d",
+  "position": {
+    "x": 683.31634122792207,
+    "y": 35.911482495523884,
+    "z": 14500,
+    "height": 675.66502463054189,
+    "width": 738.17733990147781,
+    "tabOrder": 3000
+  },
+  "visualGroup": {
+    "displayName": "Insights Vendas",
+    "groupMode": "ScaleMode"
+  }
+}

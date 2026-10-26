@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "41ddddf4a0e30c0866d0",
+  "position": {
+    "x": 1169.1133004926107,
+    "y": 243.39901477832512,
+    "z": 1000,
+    "height": 383.05418719211826,
+    "width": 722.216748768473,
+    "tabOrder": 1000
+  },
+  "visualGroup": {
+    "displayName": "Gráfico de Roscas",
+    "groupMode": "ScaleMode"
+  }
+}

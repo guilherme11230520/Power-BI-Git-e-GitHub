@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "05325890431720795593",
+  "position": {
+    "x": 30.46128412612169,
+    "y": 99.177957213270588,
+    "z": 2000,
+    "height": 60.771381226679885,
+    "width": 535.238943501098,
+    "tabOrder": 0
+  },
+  "visualGroup": {
+    "displayName": "Botões ON",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "654b106bc8d72785580a",
+  "isHidden": true
+}

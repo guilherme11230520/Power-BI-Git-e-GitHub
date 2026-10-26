@@ -1,0 +1,39 @@
+table DimCategoria
+	lineageTag: 5e8da3ca-7cce-4adf-99d0-ba0b14bdbd5d
+
+	column CategoriaID
+		dataType: int64
+		formatString: 0
+		lineageTag: c9a13fe7-c3c1-47f6-b50e-af67511dfd08
+		summarizeBy: none
+		sourceColumn: CategoriaID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Categoria
+		dataType: string
+		lineageTag: 5344cc12-3a6d-4ac7-9e35-02076c5dcdf5
+		summarizeBy: none
+		sourceColumn: Categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descricao
+		dataType: string
+		lineageTag: bce19965-c42e-4fc9-8790-41c0e85580b5
+		summarizeBy: none
+		sourceColumn: Descricao
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimCategoria = m
+		mode: import
+		source =
+				let
+				  Origem = Sql.Database("JUNINHO", "master"),
+				  #"Navegação 1" = Origem{[Schema = "dbo", Item = "DimCategoria"]}[Data]
+				in
+				  #"Navegação 1"
+
+	annotation PBI_ResultType = Table
+

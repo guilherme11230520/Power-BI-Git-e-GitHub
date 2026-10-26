@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "0f89a11031900a06324c",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 839.26108374384228,
+    "width": 738.17733990147781
+  },
+  "visualGroup": {
+    "displayName": "Insights",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "f9f606485b0ed36ccdd2",
+  "isHidden": true
+}

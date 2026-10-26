@@ -1,0 +1,85 @@
+table DimProduto
+	lineageTag: 5982a7a4-b852-465c-bdb4-51563c33ec46
+
+	column ProdutoID
+		dataType: int64
+		formatString: 0
+		lineageTag: c768a749-a726-4547-a290-dd40379dd91d
+		summarizeBy: none
+		sourceColumn: ProdutoID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Produto
+		dataType: string
+		lineageTag: efbf27ee-e75f-45fb-bc1a-7e57c4ee5c15
+		summarizeBy: none
+		sourceColumn: Produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Categoria
+		dataType: string
+		lineageTag: 047334ae-4999-4e9a-a12e-33a655fca47f
+		summarizeBy: none
+		sourceColumn: Categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column Marca
+		dataType: string
+		lineageTag: 8802a6ab-720e-4981-be81-d08cba46386f
+		summarizeBy: none
+		sourceColumn: Marca
+
+		annotation SummarizationSetBy = Automatic
+
+	column Custo
+		dataType: double
+		lineageTag: 88c54bf4-d98a-4325-a44d-c1795599a84c
+		summarizeBy: sum
+		sourceColumn: Custo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PrecoVenda
+		dataType: double
+		lineageTag: 154d1789-0443-4139-b3ff-934f0a5364f0
+		summarizeBy: sum
+		sourceColumn: PrecoVenda
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Estoque
+		dataType: int64
+		formatString: 0
+		lineageTag: eb91d8f5-363b-44b3-b8c7-23c4f6f8f23b
+		summarizeBy: sum
+		sourceColumn: Estoque
+
+		annotation SummarizationSetBy = Automatic
+
+	column CategoriaID
+		dataType: int64
+		formatString: 0
+		lineageTag: 2231608e-5451-43ca-99b9-af96f5597087
+		summarizeBy: none
+		sourceColumn: CategoriaID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimProduto = m
+		mode: import
+		source =
+				let
+				  Origem = Sql.Database("JUNINHO", "master"),
+				  #"Navegação 1" = Origem{[Schema = "dbo", Item = "DimProduto"]}[Data]
+				in
+				  #"Navegação 1"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "30f7fc5e2dbcbdb3470e",
+  "position": {
+    "x": 26.600985221674875,
+    "y": 5.3201970443349751,
+    "z": 8000,
+    "height": 88.2608695652174,
+    "width": 1869.5652173913045,
+    "tabOrder": 9000
+  },
+  "visualGroup": {
+    "displayName": "Botões da Página",
+    "groupMode": "ScaleMode"
+  }
+}

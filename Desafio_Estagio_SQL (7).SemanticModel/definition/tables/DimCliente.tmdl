@@ -1,0 +1,84 @@
+table DimCliente
+	lineageTag: 31f66efc-0d94-42b9-981f-08380dda3f5a
+
+	column ClienteID
+		dataType: int64
+		formatString: 0
+		lineageTag: 7a303b7c-e9c2-4b0b-856d-939e18243c73
+		summarizeBy: none
+		sourceColumn: ClienteID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nome
+		dataType: string
+		lineageTag: 1ea78fcf-cb4b-420a-a5cc-130748b6172c
+		summarizeBy: none
+		sourceColumn: Nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column Email
+		dataType: string
+		lineageTag: 9b4da9dd-1c06-4791-b854-3e1ed68a5ce9
+		summarizeBy: none
+		sourceColumn: Email
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cidade
+		dataType: string
+		lineageTag: a93718ef-d36e-4541-87e4-0505d11c4e7c
+		summarizeBy: none
+		sourceColumn: Cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column Estado
+		dataType: string
+		lineageTag: 26c2dfa1-962e-452d-b827-00b0d986b4dc
+		summarizeBy: none
+		sourceColumn: Estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataNascimento
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e796d0cc-a642-4628-9577-6912b064c30f
+		summarizeBy: none
+		sourceColumn: DataNascimento
+
+		variation Variation
+			isDefault
+			relationship: fc1578b5-7091-4dcc-a79a-12be516399bf
+			defaultHierarchy: LocalDateTable_e1edfa68-d317-4cb9-87a0-0a69d3e24570.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Segmento
+		dataType: string
+		lineageTag: ac75a812-f91d-454b-970f-7c3587f0d6f2
+		summarizeBy: none
+		sourceColumn: Segmento
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimCliente = m
+		mode: import
+		source =
+				let
+				  Origem = Sql.Database("JUNINHO", "master"),
+				  #"Navegação 1" = Origem{[Schema = "dbo", Item = "DimCliente"]}[Data],
+				    #"Valor Substituído" = Table.ReplaceValue(#"Navegação 1",null,"Não Registrado",Replacer.ReplaceValue,{"Email"}),
+				    #"Valor Substituído1" = Table.ReplaceValue(#"Valor Substituído",null,"Não Registrado",Replacer.ReplaceValue,{"Cidade"}),
+				    #"Valor Substituído2" = Table.ReplaceValue(#"Valor Substituído1",null,"Não Registrado",Replacer.ReplaceValue,{"Estado"})
+				in
+				    #"Valor Substituído2"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
+
