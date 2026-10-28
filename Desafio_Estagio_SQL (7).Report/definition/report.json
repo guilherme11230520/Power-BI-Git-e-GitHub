@@ -586,6 +586,51 @@
           "type": "Image"
         },
         {
+          "name": "Group_28607227163094954603.svg",
+          "path": "Group_28607227163094954603.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Group_287_(3)05050393505992479.svg",
+          "path": "Group_287_(3)05050393505992479.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Group_288982939569185432.svg",
+          "path": "Group_288982939569185432.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Group_2913337158605512699.svg",
+          "path": "Group_2913337158605512699.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Group_2919345120886548582.svg",
+          "path": "Group_2919345120886548582.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Group_2922787150430802423.svg",
+          "path": "Group_2922787150430802423.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Group_2926208920557025521.svg",
+          "path": "Group_2926208920557025521.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Group_2938957598528387359.svg",
+          "path": "Group_2938957598528387359.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Group_294820639027663165.svg",
+          "path": "Group_294820639027663165.svg",
+          "type": "Image"
+        },
+        {
           "name": "TEMPLATE_CLIENTES0752361699624079.svg",
           "path": "TEMPLATE_CLIENTES0752361699624079.svg",
           "type": "Image"
@@ -598,6 +643,11 @@
         {
           "name": "TEMPLATE_VENDAS02829136236383989.svg",
           "path": "TEMPLATE_VENDAS02829136236383989.svg",
+          "type": "Image"
+        },
+        {
+          "name": "TEMPLATE_VENDEDOR27829727160867634.svg",
+          "path": "TEMPLATE_VENDEDOR27829727160867634.svg",
           "type": "Image"
         },
         {
@@ -619,6 +669,17 @@
           "name": "Vector2616832371078648.svg",
           "path": "Vector2616832371078648.svg",
           "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "lottieCE54BF3CBD11486EAE5DEA48995B34A4",
+      "type": "CustomVisual",
+      "items": [
+        {
+          "name": "lottieCE54BF3CBD11486EAE5DEA48995B34A4.pbiviz.json",
+          "path": "lottieCE54BF3CBD11486EAE5DEA48995B34A4.pbiviz.json",
+          "type": "CustomVisualMetadata"
         }
       ]
     }

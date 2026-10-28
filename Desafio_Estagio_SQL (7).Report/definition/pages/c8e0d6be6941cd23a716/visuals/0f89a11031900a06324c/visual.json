@@ -1,12 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "0f89a11031900a06324c",
   "position": {
     "x": 0,
     "y": 0,
     "z": 0,
     "height": 839.26108374384228,
-    "width": 738.17733990147781
+    "width": 738.17733990147781,
+    "tabOrder": 3000
   },
   "visualGroup": {
     "displayName": "Insights",

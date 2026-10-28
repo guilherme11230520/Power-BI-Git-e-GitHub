@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "20a6a49f59029319d411",
   "position": {
     "x": 0.13886803400010972,
@@ -32,6 +32,21 @@
           ]
         }
       }
+    },
+    "objects": {
+      "compatibility": [
+        {
+          "properties": {
+            "legacyRendering": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "visualContainerObjects": {
       "title": [
@@ -83,5 +98,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "31137c7a6c0cd7594c2d"
+  "parentGroupName": "31137c7a6c0cd7594c2d",
+  "isHidden": true
 }

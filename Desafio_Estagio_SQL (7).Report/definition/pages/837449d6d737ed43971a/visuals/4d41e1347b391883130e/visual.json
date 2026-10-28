@@ -1,0 +1,142 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "4d41e1347b391883130e",
+  "position": {
+    "x": 566.60098522167482,
+    "y": 150.29556650246306,
+    "z": 0,
+    "height": 815.32019704433492,
+    "width": 1353.9901477832511,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "lottieCE54BF3CBD11486EAE5DEA48995B34A4",
+    "query": {
+      "queryState": {
+        "measure": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "DimData"
+                        }
+                      },
+                      "Property": "Mes"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(DimData.Mes)",
+              "nativeQueryRef": "Soma de Mes"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "DimData"
+                      }
+                    },
+                    "Property": "Mes"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "circle": [
+        {
+          "properties": {
+            "iconenome": {
+              "expr": {
+                "Literal": {
+                  "Value": "'https://lottie.host/78b59e03-b743-401c-b18a-8f403b66b2c4/vUMKzWRSnx.json'"
+                }
+              }
+            },
+            "iconelink": {
+              "expr": {
+                "Literal": {
+                  "Value": "'https://lottie.host/embed/5db5e2af-0d04-47f0-a2fa-680a38405c23/75XeKtqOPD.lottie'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
