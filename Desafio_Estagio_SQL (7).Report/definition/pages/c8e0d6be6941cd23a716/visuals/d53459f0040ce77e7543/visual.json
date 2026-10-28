@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "d53459f0040ce77e7543",
   "position": {
     "x": 1769.1104028521197,
@@ -7,7 +7,7 @@
     "z": 2000,
     "height": 42.5615763546798,
     "width": 34.581280788177338,
-    "tabOrder": 2000
+    "tabOrder": 0
   },
   "visualGroup": {
     "displayName": "Fechar Insights",
